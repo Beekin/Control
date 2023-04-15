@@ -24,8 +24,8 @@ Console.Write("[ ");
 for (int i = 0; i < num; i++)
 {
 
-    array[i] = string.Format("\"{0}\"", array[i]);
-    
+   array[i] = string.Format("\"{0}\"", array[i]);
+
     Console.Write(array[i]);
 
     if (i < array.Length - 1)
@@ -44,10 +44,10 @@ Console.Write("Новый массив строк: [ ");
 for (int j = 0; j < size; j++)
 {
     newArray[j] = string.Format("\"{0}\"", newArray[j]);
-    
+
     Console.Write(newArray[j]);
 
-     if (j < newArray.Length - 1)
+    if (j < newArray.Length - 1)
     {
         Console.Write(", ");
     }
@@ -85,6 +85,7 @@ string[] GetArray(int num)
     return res;
 }
 
+// Узнаем размер нового массива
 
 int GetSize(string[] array)
 {
@@ -94,7 +95,6 @@ int GetSize(string[] array)
     for (int i = 0; i < num; i++)
     {
         if (array[i].Length <= 3)
-
         {
             count++;
         }
@@ -103,6 +103,8 @@ int GetSize(string[] array)
     return count;
 
 }
+
+// Создаем новый массив из элементов <= 3
 
 string[] GetNewArray(string[] array)
 {
@@ -118,7 +120,6 @@ string[] GetNewArray(string[] array)
 
             index++;
         }
-
 
     }
     return res;
