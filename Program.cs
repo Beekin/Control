@@ -18,23 +18,41 @@ string[] newArray = GetNewArray(array);
 
 // Распечатываем массив
 
- Console.Write("Массив строк: [");
-        for (int i = 0; i < num; i++)
-        {
-            Console.Write(array[i]+ ",");
- 
-        }
-Console.Write("]");
+Console.Write("Исходный массив строк: ");
 
-// Распечатываем массив из символов меньше 3
+Console.Write("[ ");
+for (int i = 0; i < num; i++)
+{
 
- Console.WriteLine("Новый массив строк: [");
-        for (int j = 0; j < num; j++)
-        {
-            Console.Write(newArray[j]+ ",");
- 
-        }
-Console.Write("]");
+    Console.Write($"{array[i]}");
+
+    if (i < array.Length - 1)
+    {
+        Console.Write(", ");
+    }
+
+}
+Console.Write(" ]");
+
+Console.WriteLine();
+
+// Распечатываем массив из символов меньше или равных 3
+
+Console.Write("Новый массив строк: [ ");
+for (int j = 0; j < size; j++)
+{
+    newArray[j] = string.Format("\"{0}\"", newArray[j]);
+    
+    Console.Write(newArray[j]);
+
+     if (j < newArray.Length - 1)
+    {
+        Console.Write(", ");
+    }
+
+
+}
+Console.Write(" ]");
 
 // Вводим размер массива
 
@@ -76,7 +94,6 @@ int GetSize(string[] array)
         if (array[i].Length <= 3)
 
         {
-
             count++;
         }
     }
@@ -88,17 +105,19 @@ int GetSize(string[] array)
 string[] GetNewArray(string[] array)
 {
     string[] res = new string[size];
+
+    int index = 0;
+
     for (int i = 0; i < num; i++)
     {
         if (array[i].Length <= 3)
         {
-            for (int j = 0; j < size; j++)
-            {
-                res[j] = array[i];
-            }
+            res[index] = array[i];
 
-
+            index++;
         }
+
+
     }
     return res;
 }
