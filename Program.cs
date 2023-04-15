@@ -24,7 +24,9 @@ Console.Write("[ ");
 for (int i = 0; i < num; i++)
 {
 
-    Console.Write($"{array[i]}");
+    array[i] = string.Format("\"{0}\"", array[i]);
+    
+    Console.Write(array[i]);
 
     if (i < array.Length - 1)
     {
