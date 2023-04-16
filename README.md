@@ -5,4 +5,4 @@
 5. Написали метод, заполняющий новый массив элементами из первого массива(подходящих под условие array[i].Length <= 3)
 6. Написали метод для вывода второго массива.
 
-![Блок_схема](https://vscode.dev/github/Beekin/Control/blob/952dcc91a4148c13d2cd4751d68d27aec1611e87/1.png)
+![Блок_схема](/C:\Users\Beekin\Desktop\ControlTask\Task)
